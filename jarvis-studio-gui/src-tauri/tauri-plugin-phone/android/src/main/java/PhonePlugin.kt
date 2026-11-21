@@ -311,7 +311,7 @@ internal class IdentityVerifyHostEnvelopeArgs {
 
 @InvokeArg
 internal class FileOpArgs {
-    var uri: String = ""
+    var uri: String = ""0
     var path: String = ""
 }
 
@@ -605,14 +605,14 @@ class PhonePlugin(private val activity: Activity) : Plugin(activity) {
     private fun configureTtsVoice() {
         val engine = tts ?: return
         try {
-            engine.language = Locale.UK
+            engine.language = Locale.forLanguageTag("pt-BR")
             engine.setSpeechRate(0.92f)
             engine.setPitch(0.86f)
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 val voices = engine.voices ?: return
                 val en = voices.filter { v ->
                     val lang = v.locale?.language ?: ""
-                    lang == "en" || lang.startsWith("en")
+                    lang == "pt" && v.locale?.country == "BR" 
                 }
                 val pool = if (en.isNotEmpty()) en else voices.toList()
                 val picked = pool.firstOrNull { v ->
