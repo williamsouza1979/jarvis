@@ -311,7 +311,7 @@ internal class IdentityVerifyHostEnvelopeArgs {
 
 @InvokeArg
 internal class FileOpArgs {
-    var uri: String = ""0
+    var uri: String = ""
     var path: String = ""
 }
 
