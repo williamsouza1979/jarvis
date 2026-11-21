@@ -112,7 +112,7 @@ export async function transcribeWithGroq(
   form.append("file", blob, `speech.${ext}`);
   form.append("model", WHISPER_MODEL);
   form.append("response_format", "json");
-  form.append("language", "en");
+  form.append("language", "pt");
   form.append("temperature", "0");
   if (prompt) form.append("prompt", prompt);
 
@@ -149,7 +149,7 @@ export async function transcribeWithVertex(
     config: {
       autoDecodingConfig: {},
       model: "chirp_2",
-      languageCodes: ["en-US"],
+      languageCodes: ["pt-BR"],
       features: { enableAutomaticPunctuation: true },
     },
     content: audioBase64,

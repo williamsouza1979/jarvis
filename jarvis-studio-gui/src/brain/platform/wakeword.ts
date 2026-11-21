@@ -22,7 +22,7 @@ const WAKE = /\b(?:hey\s+|ok(?:ay)?\s+|hi\s+)?j[ae][rv]+i[s5]\b/i;
  *  2026-09-27). A bare "Jarvis" doesn't count — "my Jarvis app" is someone talking ABOUT
  *  JARVIS, which is how the 2026-09-26 false wake started. */
 const WAKE_PHRASE =
-  /(?:\b(?:hey|hi|hay|hei|ay|eh|kay|ok(?:ay)?|hello|yo)\b[\s,.!-]*|\ba[.,!]\s*)(?:j|ch|tr)[ae]r?v[aeiu]s\b/i;
+  /(?:\b(?:hey|ei|oi|hi|hay|hei|ay|eh|kay|ok(?:ay)?|hello|yo)\b[\s,.!-]*|\ba[.,!]\s*)(?:j|ch|tr)[ae]r?v[aeiu]s\b/i;
 
 export function heardWakePhrase(text: string): boolean {
   return WAKE_PHRASE.test(text);

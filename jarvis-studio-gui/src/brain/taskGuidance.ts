@@ -58,7 +58,7 @@ const GUIDANCE: Record<TaskGuidanceKind, string> = {
   ].join("\n"),
   writing: [
     "JARVIS SKILL — WRITING",
-    "Identify the intended reader, purpose, and format from the request. Preserve the user's meaning while improving clarity and structure in English.",
+    "Identify the intended reader, purpose, and format from the request. Preserve the user's meaning while improving clarity and structure in the language the user asked for (Brazilian Portuguese by default).",
     "Do not invent facts, quotations, credentials, citations, or commitments. Keep the result directly usable and match the requested tone and length.",
     "For spoken replies, prefer concise phrasing; for code, data, and long documents, preserve exact formatting when it matters.",
   ].join("\n"),
